@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>mail2folder</id>
+    <name>Mail2Folder</name>
+    <summary>Receive emails and save attachments to user folders</summary>
+    <description><![CDATA[
+Mail2Folder connects to an IMAP mailbox and automatically saves email attachments
+to designated Nextcloud folders. Each user gets a unique email address
+(e.g. username@in.cloud.example.com) and attachments are stored in their
+configured target folder.
+
+**Features:**
+- Automatic IMAP polling via background job
+- Per-user email addresses via catch-all domain
+- Configurable target folders per user
+- Duplicate detection (processed mails are tracked)
+- File conflict handling (auto-rename)
+- Admin panel for IMAP server configuration
+- User panel for personal folder settings
+    ]]></description>
+    <version>1.0.0</version>
+    <licence>agpl</licence>
+    <author>Karsten Bartkowiak</author>
+    <namespace>Mail2Folder</namespace>
+    <category>files</category>
+    <category>tools</category>
+    <bugs>https://github.com/FaustoTheCat/mail2folder/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="28" max-version="33"/>
+        <php min-version="8.1"/>
+    </dependencies>
+    <background-jobs>
+        <job>OCA\Mail2Folder\BackgroundJob\FetchMailJob</job>
+    </background-jobs>
+    <settings>
+        <admin>OCA\Mail2Folder\Settings\AdminSettings</admin>
+        <personal>OCA\Mail2Folder\Settings\PersonalSettings</personal>
+    </settings>
+</info>

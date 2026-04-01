@@ -1,0 +1,111 @@
+/* Mail2Folder Settings Styles */
+
+#mail2folder-admin,
+#mail2folder-personal {
+    max-width: 700px;
+}
+
+#mail2folder-admin h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.mail2folder-form {
+    margin-bottom: 16px;
+}
+
+.mail2folder-field {
+    margin-bottom: 12px;
+}
+
+.mail2folder-field label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.mail2folder-field input[type="text"],
+.mail2folder-field input[type="password"],
+.mail2folder-field input[type="number"],
+.mail2folder-field select {
+    width: 100%;
+    max-width: 400px;
+}
+
+.mail2folder-field .checkbox + label {
+    display: inline;
+    font-weight: normal;
+}
+
+.mail2folder-hint {
+    color: var(--color-text-maxcontrast);
+    font-size: 0.9em;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.mail2folder-hint code {
+    background: var(--color-background-dark);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 0.95em;
+}
+
+.mail2folder-actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mail2folder-status {
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.mail2folder-status.success {
+    color: var(--color-success-text);
+    background: var(--color-success-hover, rgba(70, 186, 97, 0.1));
+}
+
+.mail2folder-status.error {
+    color: var(--color-error-text);
+    background: var(--color-error-hover, rgba(224, 36, 36, 0.1));
+}
+
+/* Personal settings info box */
+.mail2folder-info-box {
+    background: var(--color-background-dark);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+}
+
+.mail2folder-info-box h4 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.mail2folder-info-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.mail2folder-info-table td {
+    padding: 4px 8px 4px 0;
+    vertical-align: top;
+}
+
+.mail2folder-info-table td:first-child {
+    white-space: nowrap;
+    width: 80px;
+}
+
+.mail2folder-info-table code {
+    background: var(--color-main-background);
+    padding: 2px 6px;
+    border-radius: 3px;
+    user-select: all;
+}
